@@ -4,7 +4,7 @@
     $error = null;
     $elementCounts = array();
 
-    if (!preg_match('/^https?:\/\/.*/', $url)) {
+    if ($url && !preg_match('/^https?:\/\/.*/', $url)) {
         $error = 'Please enter a full URL including http:// or https:// at the beginning.';
     }
 
@@ -34,7 +34,7 @@
         ksort($elementCounts); // so there's consistent order
     }
     
-    if (!$error && !$elementCounts['html'])  { // so we know if we got at least semi-valid html
+    if (!$error && $response && !$elementCounts['html'])  { // so we know if we got at least semi-valid html
         $error = 'Sorry, the URL provided did not return HTML content.';
     }
 
