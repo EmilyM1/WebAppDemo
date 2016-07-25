@@ -1,0 +1,29 @@
+
+body {
+	font-family: sans-serif;
+}
+form {
+	margin: 0 auto;
+	width: 400px;
+}
+input {
+	font-size: 32px;
+}
+pre {
+	max-height: 60ex;
+	overflow: scroll;
+	border: 1px solid #ddd;
+	padding: 4px;
+}
+.highlight {
+	background-color: orange;
+}
+.error {
+	color: #f00;
+}
+
+table tbody td:first-child {
+	color: #00f;
+	cursor: pointer;
+}
+	
